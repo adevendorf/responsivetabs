@@ -1,0 +1,69 @@
+.responsivetabs {
+	background: #444;
+	border: solid 1px #000;
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 150px;
+}
+.responsivetabs > dd {
+	display: inline-block;
+	margin: 0;
+	padding: 0;		
+}
+.responsivetabs dd > a {
+	display: block;
+	line-height: 1.5em;
+	background: #eee;
+	padding: .2em;
+}
+.responsivetabs dd > .content {
+	position: absolute;
+	display: none;
+	top: 2em;
+	left: 0px;
+	width:100%;
+}
+.responsivetabs dd.active-tab > a {
+	background: #fff;
+}
+.responsivetabs dd > .content.active {
+	display: none;
+}
+.responsivetabs dd.active-tab > .content {
+	display: block;
+	background: #fff;
+}
+
+@media (max-width: 800px) {
+	.responsivetabs {
+		position: relative;
+		height: auto;
+	}
+
+	.responsivetabs > dd {
+		display: block;
+
+	}
+	.responsivetabs dd.active-tab > a {
+			background: #eee;
+	}
+	.responsivetabs dd > a {
+		display: block;
+		line-height: 1.5em;
+		background: #eee;
+	}
+
+	.responsivetabs dd > .content {
+		position: static;
+		display: none;
+	}
+	.responsivetabs dd.active-tab > .content { 
+		display: none;
+	}
+	.responsivetabs dd > .content.active {
+		display: block;
+		background: #fff;
+	}
+}
